@@ -1,0 +1,518 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f3ef;
+    color:#333;
+}
+
+/* ===================== */
+/* MENÚ                  */
+/* ===================== */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 8%;
+    background:rgba(18,18,18,.65);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d6a45a;
+}
+
+/* ===================== */
+/* HERO                  */
+/* ===================== */
+
+.hero{
+    height:100vh;
+    background-image:url("img/portada.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.48);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.ubicacion{
+
+    display:block;
+
+    color:#d8b26e;
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+
+}
+
+.hero h1{
+
+    font-size:78px;
+
+    line-height:1.05;
+
+    margin-bottom:25px;
+
+    text-shadow:0 6px 20px rgba(0,0,0,.45);
+
+}
+
+.hero p{
+
+    font-size:34px;
+
+    line-height:52px;
+
+    margin-bottom:45px;
+
+    text-shadow:0 4px 10px rgba(0,0,0,.45);
+
+}
+
+.boton{
+
+    background:#b88948;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:18px 42px;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.boton:hover{
+
+    background:#94662f;
+
+    transform:translateY(-3px);
+
+}
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:30px;
+
+    font-size:42px;
+
+    animation:flotar 1.8s infinite;
+
+    opacity:.85;
+
+}
+
+/* ===================== */
+/* SECCIONES             */
+/* ===================== */
+
+section{
+
+    padding:110px 10%;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:44px;
+
+    color:#5d3f20;
+
+    margin-bottom:45px;
+
+}
+
+section p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    line-height:34px;
+
+    font-size:19px;
+
+}
+
+/* ===================== */
+/* TARJETAS              */
+/* ===================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:30px;
+
+    margin-top:55px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card h3{
+
+    color:#7a552a;
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+}
+
+.card p{
+
+    line-height:28px;
+
+}
+
+/* ===================== */
+/* PROCESO               */
+/* ===================== */
+
+.timeline{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+
+    margin-top:50px;
+
+}
+
+.timeline div{
+
+    background:white;
+
+    padding:28px;
+
+    text-align:center;
+
+    border-radius:18px;
+
+    font-size:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.timeline div:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===================== */
+/* FOOTER                */
+/* ===================== */
+
+footer{
+
+    background:#2d2015;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px;
+
+    font-size:15px;
+
+}
+
+/* ===================== */
+/* ANIMACIONES           */
+/* ===================== */
+
+@keyframes flotar{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===================== */
+/* CELULAR               */
+/* ===================== */
+
+@media(max-width:900px){
+
+nav{
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:24px;
+
+line-height:36px;
+
+}
+
+.logo{
+
+font-size:24px;
+
+}
+
+section{
+
+padding:90px 8%;
+
+}
+
+} 
+/*==========================================
+            NUESTRA HISTORIA
+==========================================*/
+
+.historia{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:70px;
+    padding:110px 10%;
+    background:#faf7f2;
+    flex-wrap:wrap;
+}
+
+.historia-imagen{
+    flex:1;
+    min-width:350px;
+}
+
+.historia-imagen img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+}
+
+.historia-texto{
+    flex:1;
+    min-width:350px;
+}
+
+.subtitulo{
+    color:#b88646;
+    letter-spacing:4px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.historia h2{
+    font-size:48px;
+    margin:20px 0;
+    color:#2b2018;
+}
+
+.historia p{
+    font-size:19px;
+    color:#555;
+    line-height:1.9;
+    margin-bottom:20px;
+}/* =======================================
+   CONTACTO
+======================================= */
+
+.contacto{
+    background:#f8f5f0;
+}
+
+.contacto-info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.contacto-card{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.contacto-card:hover{
+    transform:translateY(-8px);
+}
+
+.contacto-card h3{
+    color:#7a552a;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.contacto-card p{
+    line-height:30px;
+}
+
+/* =======================================
+   TITULOS DE SECCIÓN
+======================================= */
+
+.titulo-seccion{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.titulo-seccion span{
+    color:#b88948;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:4px;
+}
+
+.titulo-seccion h2{
+    font-size:42px;
+    color:#2e2218;
+    margin:15px 0;
+}
+
+.titulo-seccion p{
+    max-width:700px;
+    margin:auto;
+}
+
+/* =======================================
+   FOOTER
+======================================= */
+
+.footer-contenido{
+    max-width:900px;
+    margin:auto;
+}
+
+.footer-contenido h2{
+    margin-bottom:15px;
+    font-size:34px;
+}
+
+.footer-contenido p{
+    margin:8px 0;
+}
