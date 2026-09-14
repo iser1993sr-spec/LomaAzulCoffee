@@ -9,6 +9,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .finca{background:#f1ece3}
+        .finca:before{display:none}
+        .finca-vista{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:stretch}
+        .finca-foto{position:relative;min-height:500px;overflow:hidden}
+        .finca-foto img{width:100%;height:100%;min-height:500px;object-fit:cover;display:block}
+        .finca-foto:after{content:'';position:absolute;inset:18px;border:1px solid rgba(255,255,255,.58);pointer-events:none}
+        .finca-info{background:#fffdf9;padding:46px 44px;display:flex;flex-direction:column;justify-content:center}
+        .finca-overline{font-size:10px;letter-spacing:3px;color:#b88a4a;font-weight:700;text-transform:uppercase;margin-bottom:14px}
+        .finca-info h3{font-family:'Cormorant Garamond',serif;font-size:40px;line-height:1;color:#211b16;font-weight:600;margin-bottom:16px}
+        .finca-lead{color:#756c62;font-size:14px;line-height:1.9;margin-bottom:30px;max-width:470px}
+        .finca-lugar{font-size:14px;color:#4f473f;line-height:1.8;margin-bottom:30px;padding-bottom:25px;border-bottom:1px solid #ddd4c8}
+        .finca-datos{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#ded5c9}
+        .finca-dato{background:#fffdf9;padding:22px 20px;border-right:1px solid #ded5c9;border-bottom:1px solid #ded5c9;min-height:115px}
+        .finca-dato:nth-child(2n){border-right:0}.finca-dato:nth-child(3),.finca-dato:nth-child(4){border-bottom:0}
+        .finca-dato span{display:block;font-size:10px;color:#a27a49;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+        .finca-dato strong{display:block;font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1.05;color:#2b251f;font-weight:600}
+        .finca-dato small{display:block;margin-top:7px;font-size:12px;color:#756c62;line-height:1.5}
+        .finca-frase{margin-top:26px;font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.35;color:#51483f;font-style:italic}
+        @media(max-width:900px){.finca-vista{grid-template-columns:1fr;gap:30px}.finca-foto,.finca-foto img{min-height:430px;height:430px}.finca-info{padding:38px 30px}}
+        @media(max-width:600px){.finca-vista{gap:22px}.finca-foto,.finca-foto img{min-height:330px;height:330px}.finca-info{padding:30px 22px}.finca-info h3{font-size:34px}.finca-datos{grid-template-columns:1fr}.finca-dato,.finca-dato:nth-child(2n),.finca-dato:nth-child(3){border-right:0;border-bottom:1px solid #ded5c9}.finca-dato:last-child{border-bottom:0}}
+    </style>
 </head>
 <body>
 <nav>
@@ -48,11 +70,21 @@
 </section>
 <section id="finca" class="finca">
     <div class="titulo-seccion"><span>LA FINCA</span><h2>El origen de cada taza</h2><p>Ubicada en Santa Martha de Loma Azul, San Rafael del Norte, Jinotega.</p></div>
-    <div class="cards">
-        <div class="card"><h3>📍 Ubicación</h3><p>Santa Martha de Loma Azul<br>San Rafael del Norte<br>Jinotega</p></div>
-        <div class="card"><h3>⛰️ Altitud</h3><p>1182 msnm</p></div>
-        <div class="card"><h3>🌱 Variedad</h3><p>Obatá</p></div>
-        <div class="card"><h3>💧 Proceso</h3><p>Lavado</p></div>
+    <div class="finca-vista">
+        <div class="finca-foto"><img src="img/finca1.jpeg" alt="Paisaje de la finca Loma Azul Coffee"></div>
+        <div class="finca-info">
+            <span class="finca-overline">LOMA AZUL COFFEE</span>
+            <h3>Donde comienza nuestro café</h3>
+            <p class="finca-lead">Un entorno de montaña donde la altura, el clima y el trabajo de nuestra familia se encuentran para cultivar café con identidad y calidad.</p>
+            <p class="finca-lugar"><strong>Santa Martha de Loma Azul</strong><br>San Rafael del Norte · Jinotega · Nicaragua</p>
+            <div class="finca-datos">
+                <div class="finca-dato"><span>Altitud</span><strong>1,182</strong><small>metros sobre el nivel del mar</small></div>
+                <div class="finca-dato"><span>Variedades</span><strong>Obatá</strong><small>Parainema</small></div>
+                <div class="finca-dato"><span>Proceso</span><strong>Lavado</strong><small>Procesamiento enfocado en preservar la calidad</small></div>
+                <div class="finca-dato"><span>Origen</span><strong>Jinotega</strong><small>Montañas de San Rafael del Norte</small></div>
+            </div>
+            <p class="finca-frase">“El origen de cada taza comienza aquí.”</p>
+        </div>
     </div>
 </section>
 <section id="cafe" class="cafe">
@@ -79,7 +111,7 @@
     <div class="titulo-seccion"><span>CONTACTO</span><h2>Hablemos de café</h2><p>Gracias por conocer nuestra historia. Cada taza representa el esfuerzo, la dedicación y el amor por el café cultivado en nuestras montañas.</p></div>
     <div class="contacto-info">
         <div class="contacto-card"><h3>📍 Ubicación</h3><p>Santa Martha de Loma Azul<br>San Rafael del Norte<br>Jinotega, Nicaragua</p></div>
-        <div class="contacto-card"><h3>🌱 Variedad</h3><p>Obatá</p></div>
+        <div class="contacto-card"><h3>🌱 Variedades</h3><p>Obatá · Parainema</p></div>
         <div class="contacto-card"><h3>💧 Proceso</h3><p>Lavado</p></div>
     </div>
 </section>
